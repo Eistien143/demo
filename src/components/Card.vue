@@ -15,14 +15,15 @@ export default {
   data() {
     return {};
   },
-  props: { title: String, description: String, ammount: Number },
+  props: { title: String, description: String, ammount: String },
 };
 </script>
 
 <style>
 .card {
-  width: 300px;
+  width: 100%;
   height: 200px;
-  background-color: rgb(150, 150, 150);
+  background-color: rgb(151, 209, 248);
+  margin-top: 10px;
 }
 </style>
