@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h3>this is home page</h3>
+    <h3>See All Mobile</h3>
     <Card
       v-for="(mobile, i) in carts"
       :key="i"
-      :title="mobile.name"
-      :description="mobile.details"
+      v-bind:title="mobile.name"
+      v-bind:description="mobile.details"
       :ammount="mobile.price"
     ></Card>
   </div>
@@ -28,12 +28,17 @@ export default {
         {
           name: "Jio Mobile",
           details: "this is a Jio phone",
-          price: 90000,
+          price: "90000",
         },
         {
-          name: "Samsung Mobile",
+          name: "Vivo Mobile",
           details: "this is a samsung phone",
-          price: 7000,
+          price: "7000",
+        },
+        {
+          name: "Intex Mobile",
+          details: "this is a intex phone",
+          price: "70000",
         },
       ],
     };
