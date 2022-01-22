@@ -1,13 +1,17 @@
 <template>
   <div>
     <h3>See All Mobile</h3>
-    <Card
-      v-for="(mobile, i) in carts"
-      :key="i"
-      v-bind:title="mobile.name"
-      v-bind:description="mobile.details"
-      :ammount="mobile.price"
-    ></Card>
+    <button v-if="!isShow" @click="seeAllMobiles">See All Mobiles</button>
+    <button v-else @click="seeAllMobiles">Hide All Mobiles</button>
+    <div v-if="isShow">
+      <Card
+        v-for="(mobile, i) in carts"
+        :key="i"
+        v-bind:title="mobile.name"
+        v-bind:description="mobile.details"
+        :ammount="mobile.price"
+      ></Card>
+    </div>
   </div>
 </template>
 
@@ -19,6 +23,7 @@ export default {
 
   data() {
     return {
+      isShow: false,
       carts: [
         {
           name: "Samsung Mobile",
@@ -42,6 +47,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    seeAllMobiles() {
+      this.isShow = !this.isShow;
+      console.log(this.isShow);
+    },
   },
 };
 </script>
