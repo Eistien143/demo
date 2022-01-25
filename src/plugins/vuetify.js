@@ -1,10 +1,15 @@
+import "@mdi/font/css/materialdesignicons.css";
 import Vue from "vue";
 import Vuetify from "vuetify";
 import "vuetify/dist/vuetify.min.css";
+import colors from "vuetify/lib/util/colors";
 
 Vue.use(Vuetify);
 
 export default new Vuetify({
+  icons: {
+    iconfont: "mdi",
+  },
   theme: {
     options: {
       customProperties: true,
@@ -18,6 +23,7 @@ export default new Vuetify({
         info: "#2196F3",
         success: "#4CAF50",
         warning: "#FFC107",
+        demo: colors.red.darken1,
       },
     },
   },
